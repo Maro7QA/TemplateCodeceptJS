@@ -15,6 +15,12 @@ export const config: CodeceptJS.MainConfig = {
       browser: "chrome"
     }
   },
+  mocha: {
+    reporterOptions: {
+      mochaFile: "output/result.xml",
+      reportDir: "output"
+    }
+  },
   include: {
     I: "./steps_file"
   },
