@@ -24,6 +24,12 @@ export const config: CodeceptJS.MainConfig = {
   include: {
     I: "./steps_file"
   },
+  plugins: {
+    wdio: {
+      enabled: true,
+      services: ["selenium-standalone"]
+    }
+  },
   name: "TemplateCodeceptJS",
   fullPromiseBased: false
 };
