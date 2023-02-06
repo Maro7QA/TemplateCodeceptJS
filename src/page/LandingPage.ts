@@ -3,11 +3,19 @@ class LandingPage {
   searchInputContainer = '[data-testid="searchBarInput"]';
   searchIcon = '[data-testid="searchIcon"]';
   sportsWear = '[data-testid="Label_Sportswear"]';
+  acceptAllCookies = { css: '[id="onetrust-accept-btn-handler"]' };
+  showAllResults = { css: '[data-testid="SearchTermShowAll"]' };
 
-  clickSearchIcon() {
+  selectAcceptAllCookies() {
     const { I } = inject();
-    I.waitForVisible(this.searchIcon);
-    I.click(this.searchIcon);
+    I.waitForVisible(this.acceptAllCookies);
+    I.click(this.acceptAllCookies);
+  }
+
+  selectShowAllResults() {
+    const { I } = inject();
+    I.waitForVisible(this.showAllResults);
+    I.click(this.showAllResults);
   }
 
   selectSportsWear() {
