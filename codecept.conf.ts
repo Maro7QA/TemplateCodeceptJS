@@ -12,6 +12,7 @@ export const config: CodeceptJS.MainConfig = {
   helpers: {
     WebDriver: {
       url: "https://www.magentasport.de/",
+      host: "http://localhost:4444/wd/hub",
       browser: "chrome",
     },
   },
