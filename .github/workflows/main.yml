@@ -22,5 +22,8 @@ jobs:
         run: npm install -g webdriver-manager
         run: webdriver-manager start
 
+      - name: Start Selenium Server
+        run: webdriver-manager start
+
       - name: Run tests
         run: npx codeceptjs run -g homepage
