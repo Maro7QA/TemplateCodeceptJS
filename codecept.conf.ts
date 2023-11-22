@@ -11,25 +11,25 @@ export const config: CodeceptJS.MainConfig = {
   output: "./output",
   helpers: {
     WebDriver: {
-      url: "https://www.aboutyou.de",
-      browser: "chrome"
-    }
+      url: "https://www.magentasport.de/",
+      browser: "firefox",
+    },
   },
   mocha: {
     reporterOptions: {
       mochaFile: "output/result.xml",
-      reportDir: "output"
-    }
+      reportDir: "output",
+    },
   },
   include: {
-    I: "./steps_file"
+    I: "./steps_file",
   },
   plugins: {
     wdio: {
       enabled: true,
-      services: ["selenium-standalone"]
-    }
+      services: ["selenium-standalone"],
+    },
   },
   name: "TemplateCodeceptJS",
-  fullPromiseBased: false
+  fullPromiseBased: false,
 };
