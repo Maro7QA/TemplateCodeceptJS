@@ -6,9 +6,7 @@ Feature("homepage");
 Scenario("open homepage @homepage", ({ I }) => {
   I.amOnPage("/");
   landingPage.selectAcceptAllCookies();
-
-  landingPage.inputSearchTerm("Ski jacket");
-  landingPage.selectShowAllResults();
-  I.waitForVisible(productLandingPage.plpSection, 10);
-  productLandingPage.selectFirstProductPlp();
+  landingPage.selectBasketball();
+  landingPage.showResults();
+  I.waitForVisible(productLandingPage.offer, 10);
 });

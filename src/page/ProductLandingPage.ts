@@ -1,11 +1,10 @@
 class ProductLandingPage {
-  plpSection = { css: '[data-testid="sectionEnd"]' };
-  firstProductPlp = '(//*[@data-testid="ProductTileHeaderCTA"])[1]';
+  offer = { css: '[class="angebot"]' };
 
-  selectFirstProductPlp() {
+  viewOffers() {
     const { I } = inject();
-    I.waitForVisible(this.firstProductPlp, 10);
-    I.click(this.firstProductPlp);
+    I.waitForVisible(this.offer, 10);
+    I.seeElement(this.offer);
   }
 }
 

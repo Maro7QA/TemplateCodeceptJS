@@ -2,9 +2,10 @@ class LandingPage {
   //locator Id's
   searchInputContainer = '[data-testid="searchBarInput"]';
   searchIcon = '[data-testid="searchIcon"]';
-  sportsWear = '[data-testid="Label_Sportswear"]';
-  acceptAllCookies = { css: '[id="onetrust-accept-btn-handler"]' };
-  showAllResults = { css: '[data-testid="SearchTermShowAll"]' };
+  basketballTab =
+    '[class="font-button header__target-group-element header__target-group-element--basketball"]';
+  acceptAllCookies = { css: '[id="consentAcceptAll"]' };
+  showAllResults = { css: '[class="btn btn-magenta showcase__link"]' };
 
   selectAcceptAllCookies() {
     const { I } = inject();
@@ -12,23 +13,17 @@ class LandingPage {
     I.click(this.acceptAllCookies);
   }
 
-  selectShowAllResults() {
+  selectBasketball() {
     const { I } = inject();
-    I.waitForVisible(this.showAllResults);
-    I.click(this.showAllResults);
+    I.waitForVisible(this.basketballTab);
+    I.click(this.basketballTab);
   }
 
-  selectSportsWear() {
-    const { I } = inject();
-    I.waitForVisible(this.sportsWear);
-    I.click(this.sportsWear);
-  }
-
-  inputSearchTerm(searchTerm) {
+  showResults() {
     const { I } = inject();
     I.scrollPageToTop();
-    I.waitForVisible(this.searchInputContainer, 10);
-    I.fillField(this.searchInputContainer, searchTerm);
+    I.waitForVisible(this.showAllResults, 10);
+    I.click(this.showAllResults);
   }
 }
 
