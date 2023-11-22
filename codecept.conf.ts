@@ -12,9 +12,20 @@ export const config: CodeceptJS.MainConfig = {
   helpers: {
     WebDriver: {
       url: "https://www.magentasport.de/",
+      windowSize: "1920x1080",
       host: "127.0.0.1",
       port: 4444,
-      browser: "chrome",
+      browser: "firefox",
+      desiredCapabilities: {
+        chromeOptions: {
+          args: [
+            "--headless",
+            "--disable-gpu",
+            "--window-size=1200,1000",
+            "--no-sandbox",
+          ],
+        },
+      },
     },
   },
   mocha: {
