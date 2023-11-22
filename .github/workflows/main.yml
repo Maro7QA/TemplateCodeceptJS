@@ -20,7 +20,7 @@ jobs:
         run: webdriver-manager start --detach
 
       - name: Wait for Selenium Server to Start
-        run: ./wait-for-it.sh -t 0 localhost:4444
+        run: sleep 20 # Adjust the sleep duration based on your needs
 
       - name: Install dependencies
         run: |
