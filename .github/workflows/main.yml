@@ -15,6 +15,15 @@ jobs:
           npm install
           npm install -g codeceptjs
 
+     - name: Setting up a Selenium Server
+        run: npm install -g webdriver-manager
+
+      - name: Update Selenium Server
+         run: webdriver-manager update
+
+      - name: Start Selenium Server
+         run: webdriver-manager start --detach
+
       - name: Run CodeceptJS tests
         run: |
           npx codeceptjs run -g homepage
