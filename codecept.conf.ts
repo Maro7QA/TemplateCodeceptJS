@@ -12,7 +12,7 @@ export const config: CodeceptJS.MainConfig = {
   helpers: {
     WebDriver: {
       url: "https://www.magentasport.de/",
-      browser: "firefox",
+      browser: "chrome",
     },
   },
   mocha: {
