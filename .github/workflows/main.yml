@@ -25,7 +25,7 @@ jobs:
         run: webdriver-manager update
 
       - name: Start Selenium Server
-        run: webdriver-manager start
+        run: webdriver-manager start --detach
 
       - name: Run tests
         run: npx codeceptjs run -g homepage
