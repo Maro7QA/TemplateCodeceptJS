@@ -20,7 +20,6 @@ jobs:
 
       - name: Setting up a Selenium Server
         run: npm install -g webdriver-manager
-        run: webdriver-manager start
 
       - name: Start Selenium Server
         run: webdriver-manager start
