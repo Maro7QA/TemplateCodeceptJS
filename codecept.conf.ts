@@ -13,7 +13,7 @@ export const config: CodeceptJS.MainConfig = {
     WebDriver: {
       url: "https://www.magentasport.de/",
       windowSize: "1920x1080",
-      host: "127.0.0.1",
+      host: "0.0.0.0",
       port: 4444,
       browser: "firefox",
       desiredCapabilities: {
